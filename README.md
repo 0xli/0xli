@@ -1,8 +1,7 @@
-<p align="right">
-🌐 Languages: English | [中文](./README.zh.md)
-</p>
+🌐 Languages: [English](./README.md) | [中文](./README.zh.md)
 
 # 👋 Hi, I'm Wei Li (0xli)
+...
 
 Welcome to my GitHub! I'm a software engineer and founder currently focused on building the future of decentralized communication.
 
