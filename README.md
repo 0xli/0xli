@@ -26,6 +26,17 @@ Welcome to my GitHub! I'm a software engineer and founder currently focused on b
 
 > Today's social network are not open networks — they are social app or walled gardens.
 
+**Decent Network** is a decentralized, permissionless social infrastructure — similar in spirit to **Bitcoin** and **Ethereum**, but focused on communication and identity rather than finance.
+
+Unlike blockchains that maintain distributed ledgers, Decent Network does not aim to be another financial layer. Instead, it exists **parallel to Bitcoin and Ethereum** as one of the missing pieces of public infrastructure for decentralized applications.
+
+Since Bitcoin's invention, many projects have tried to build decentralized infrastructure beyond money — such as:
+- Decentralized storage (e.g. Filecoin)
+- Decentralized identity and social protocols (e.g. Lens Protocol, Farcaster)
+- Decentralized domain systems (e.g. ENS)
+
+However, **very few of these protocols have seen meaningful adoption beyond crypto-native circles.** Decent Network rethinks the architecture by focusing on **real-time messaging, AI agents, and P2P connectivity**, aiming to build something **people actually use**, not just invest in.
+
 **[Decent Network](https://decent.network)** is not just a social protocol — it's a next-generation, peer-to-peer communication infrastructure built **on top of the Internet**, not bound by IP addresses or domains.
 
 ### Key Innovations:
