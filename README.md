@@ -31,7 +31,7 @@ Welcome to my GitHub! I'm a software engineer and founder currently focused on b
 ### Key Innovations:
 
 - 🔗 **Global P2P Mesh Network**: Devices connect directly in a global mesh network without relying on static IPs, ports, or DNS. If a device is online, it’s reachable.
-- ❌ No more ngrok, port forwarding, or centralized relays — this network **replaces traditional tunneling solutions** with a fully decentralized overlay.
+- ❌ No more **[ngrok](https://github.com/NGROK)**, port forwarding, or centralized relays — this network **replaces traditional tunneling solutions** with a fully decentralized overlay.
 - 🧠 **Decentralized Identity**: Both humans and AI agents have cryptographically verifiable IDs.
 - 💬 **Built-in Messaging + Payments**: Text, voice, video, and crypto transfers — all natively supported via open protocols.
 - 🛠️ **Developer-Friendly**: Any app or agent can plug into the network with equal access — no gatekeepers.
