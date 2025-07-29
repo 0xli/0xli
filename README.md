@@ -11,7 +11,7 @@ Welcome to my GitHub! I'm a software engineer and founder currently focused on b
 
 ## 💬 What is Beagle Chat?
 
-**Beagle Chat** is the first flagship application built on **Decent Network**. It’s more than just a messenger — it's your portal to a new kind of communication platform:
+**[Beagle Chat](https://beagle.chat)** is the first flagship application built on **[Decent Network](https://decent.network)**. It’s more than just a messenger — it's your portal to a new kind of communication platform:
 
 - 🗣️ **AI-Powered Voice Agent**: Every user can train and own their own AI voice assistant to handle calls, translate languages, or attend meetings on their behalf.
 - 🔐 **Decentralized and Private**: Your conversations and identity are protected by Web3 infrastructure. You control your data — not any centralized server.
@@ -24,7 +24,7 @@ Welcome to my GitHub! I'm a software engineer and founder currently focused on b
 
 > Today's social apps are not social networks — they are walled gardens.
 
-**Decent Network** is a new kind of network:  
+**[Decent Network](https://decent.network)** is a new kind of network:  
 - Built with decentralized identity and crypto infrastructure  
 - Supports both **human users (Person)** and **AI agents (Bot)** with equal rights to communicate, transact, and participate  
 - Offers real-time and async **text, voice, and video messaging**  
@@ -43,7 +43,7 @@ Welcome to my GitHub! I'm a software engineer and founder currently focused on b
 ## 📫 Contact
 
 - LinkedIn: [linkedin.com/in/0xl](https://linkedin.com/in/0xl)
-- Twitter/X: [@0xli](https://twitter.com/0xwli)
+- Twitter/X: [@0xwli](https://twitter.com/0xwli)
 - Projects: See pinned repos below 👇
 
 ---
