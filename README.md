@@ -3,7 +3,7 @@
 # 👋 Hi, I'm Wei Li (0xli)
 ...
 
-Welcome to my GitHub! I'm a software engineer and founder currently focused on building the future of decentralized communication.
+Welcome to my GitHub! I'm a software engineer and founder currently focused on building the future of social network.
 
 ## 🧠 About Me
 
@@ -24,7 +24,7 @@ Welcome to my GitHub! I'm a software engineer and founder currently focused on b
 
 ## 🌍 What is Decent Network?
 
-> Today's social apps are not social networks — they are walled gardens.
+> Today's social network are not open networks — they are social app or walled gardens.
 
 **[Decent Network](https://decent.network)** is not just a social protocol — it's a next-generation, peer-to-peer communication infrastructure built **on top of the Internet**, not bound by IP addresses or domains.
 
