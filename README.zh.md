@@ -1,8 +1,7 @@
-<p align="right">
 🌐 语言切换：[English](./README.md) | 中文
-</p>
 
 # 👋 你好，我是 Wei Li（0xli）
+...
 
 欢迎访问我的 GitHub！我是一位软件工程师和创始人，正在专注于构建去中心化通信的未来。
 
