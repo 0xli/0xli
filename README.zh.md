@@ -7,8 +7,10 @@
 
 ## 🧠 关于我
 
-- 🛠 正在开发 **[Decent Network](https://decent.network)**（[GitHub 代码库](https://github.com/decentnetworks)）—— 一个真正意义上的社交网络基础设施，用户自己拥有身份和数据，不依赖任何中心化公司。
-- 💬 创建了 **[Beagle Chat](https://beagle.chat)** —— 一个基于 Decent Network 的去中心化聊天与支付应用，结合了 Web3 与 AI 语音助手技术。
+- 🛠 正在开发 **[Decent Network](https://decent.network)**（[GitHub 代码库](https://github.com/decentnetworks)）—— 一个真正意义上的社交网络基础设施，用户自己拥有身份和数据，不依赖任何中心化公司。Decent Network 构建一个去中心化的好友网络（基于 DHT）：身份即公钥，通信以“成为好友”为许可，在线状态与事件天然存在；并在其上叠加存储、数据访问与智能能力，让 Web3 + AI 应用无需重复搭建隐形基础设施即可快速上线与扩展。  
+
+- 💬 创建了 **[Beagle Chat](https://beagle.chat)** —— 一个基于 Decent Network 的去中心化聊天与支付应用，结合了 Web3 与 AI 语音助手技术。Beagle Chat 是基于 Decent Network 的旗舰应用形态（iOS/Android/Web），用于验证并沉淀可复用的客户端能力与交互体验。
+
 - 🌐 倡导开放生态：与 Facebook 或微信不同，**Decent Network** 让所有开发者都能平等地接入社交数据，自由构建自己的社交应用。
 - 🌱 热衷于 Web3、AI 与社交系统的融合，让人类与智能体（Bot）能够安全共存、自由互动。
 
