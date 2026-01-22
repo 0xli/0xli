@@ -7,8 +7,10 @@ Welcome to my GitHub! I'm a software engineer and founder currently focused on b
 
 ## 🧠 About Me
 
-- 🛠 Building **[Decent Network](https://decent.network)** ([GitHub](https://github.com/decentnetworks)) — a true social network infrastructure where **identities and data are owned by users**, not corporations.
-- 💬 Creator of **[Beagle Chat](https://beagle.chat)** — a decentralized messaging and payment app powered by **Web3** and **AI voice agents**, running on the Decent Network.
+- 🛠 Building **[Decent Network](https://decent.network)** ([GitHub](https://github.com/decentnetworks)) — a true social network infrastructure where **identities and data are owned by users**, not corporations. Decent Network builds a decentralized Friend Network (DHT-based) where identity is a public key, communication is permissioned by friendship, and presence/events are native—then layers storage, data access, and intelligence so Web3 + AI apps can ship without rebuilding invisible infrastructure.
+
+- 💬 Creator of **[Beagle Chat](https://beagle.chat)** — a decentralized messaging and payment app powered by **Web3** and **AI voice agents**, running on the Decent Network. Beagle Chat is the flagship application built on Decent Network (iOS/Android/Web), validating the primitives in production and distilling reusable client capability.
+
 - 🌐 Advocate for open ecosystems: unlike Facebook or WeChat, where only the app provider controls the data, **Decent Network** lets anyone build apps that access social data **equally and fairly**.
 - 🌱 Passionate about the convergence of **Web3, AI, and social systems**, empowering both humans and autonomous agents (bots) to coexist and interact securely.
 
