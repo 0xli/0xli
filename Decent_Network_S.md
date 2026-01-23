@@ -1,4 +1,4 @@
-## Decent Network Introducation
+## Decent Network - a Friend Network for Social Application
 
 Decent Network builds a decentralized Friend Network (DHT-based) where identity is a public key, communication is permissioned by friendship, and presence/events are native—then layers storage, data access, and intelligence so Web3 + AI apps can ship without rebuilding invisible infrastructure.
 
