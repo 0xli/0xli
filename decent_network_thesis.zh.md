@@ -44,7 +44,7 @@ Vitalik 的头号障碍确实棘手。Decent 的应对：
 - **开放协作**：黑客松、资助、试点来教育和吸纳用户
 
 #### 行动号召
-Decent Network 不是又一个应用，而是 SocialFi 缺失的基础层：许可less、公钥寻址、好友绑定、P2P 通信，事件与消息直接在设备间流动。
+Decent Network 不是又一个应用，而是 SocialFi 缺失的基础层：无许可、公钥寻址、好友绑定、P2P 通信，事件与消息直接在设备间流动。
 
 探索 → https://decent.network  
 试用 Beagle Chat → https://beagle.chat  
