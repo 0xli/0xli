@@ -1,4 +1,4 @@
-### Revolutionizing Social Coordination: The Decent Network Thesis
+### Revolutionizing the Rules of Social Networking: The Decent Network Thesis
 
 In an era of centralized social platforms that harvest data, manipulate feeds, censor content, and lock users into corporate clouds, **Decent Network** offers a foundational shift: a device-centric, peer-to-peer (P2P) protocol that makes social feel like real life—direct, unmediated, and user-controlled.
 
