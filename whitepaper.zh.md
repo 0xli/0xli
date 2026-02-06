@@ -1,4 +1,4 @@
-# Whitepaper：Decent Network × App/Web × Agent 的三层架构
+# Whitepaper：Decent Network × App/Web × Agent 的系统架构
 
 > 目标读者：Founder / 技术负责人 / 投资人  
 > 本文只描述“需求、抽象与架构”，不展开实现细节。
