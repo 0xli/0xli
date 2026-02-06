@@ -1,4 +1,4 @@
-# 关于 AI 开发 App 与 Agent 系统的深入探讨
+# 关于开发 App 与 Agent 系统的深入探讨
 
 Wei Li  
 @0xWLi  
