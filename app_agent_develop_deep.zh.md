@@ -1,7 +1,7 @@
 # 关于开发 App 与 Agent 系统的深入探讨
 
 Wei Li  
-@0xWLi  
+[@0xWLi](https://x.com/0xwli)  
 Jan 20
 
 ---
@@ -29,7 +29,7 @@ AI 可以显著加速编码与原型开发，但以下关键能力仍然依赖�
 
 ---
 
-## 3）Decent Network（底座网络）
+## 3）[Decent Network](https://decent.network)（底座网络）
 
 Decent Network 的最基础能力是 **通讯**。
 
@@ -43,7 +43,7 @@ Decent Network 通过去中心化的节点发现、路由与中继机制，使�
 
 ---
 
-## 4）Beagle Chat Framework（客户端框架）
+## 4）[Beagle Chat](https://beagle.chat) Framework（客户端框架）
 
 Beagle Chat Framework 是已上架应用商店的 **Beagle Chat** 客户端的框架化实现与可复用抽象，用于快速构建与长期维护面向人类用户的 App / Web 产品。
 
