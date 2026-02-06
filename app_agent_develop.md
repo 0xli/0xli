@@ -2,7 +2,7 @@
 # An In-Depth Discussion on Building Apps and Agent Systems
 
 Wei Li  
-@0xWLi  
+[@0xWLi](https://x.com/0xwli)  
 Jan 20 - Feb 5
 
 ---
@@ -30,7 +30,7 @@ These are fundamentally **systems engineering problems**, not code generation pr
 
 ---
 
-## 3) Decent Network (Base Network Layer)
+## 3) [Decent Network](https://decent.network) (Base Network Layer)
 
 The most fundamental capability of Decent Network is **communication**.
 
@@ -44,7 +44,7 @@ At the same time, Decent Network natively supports **AI Agents as first-class ci
 
 ---
 
-## 4) Beagle Chat Framework (Client Framework)
+## 4) [Beagle Chat](https://beagle.chat) Framework (Client Framework)
 
 Beagle Chat Framework is the framework-level implementation and reusable abstraction of **Beagle Chat**, an app already launched on app stores, designed to quickly build and sustainably maintain App/Web products for human users.
 
