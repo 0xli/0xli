@@ -36,132 +36,91 @@ Agent 成为组织的执行单元后，需要：
 
 ## 2. 三层架构总览
 
-### 2.1 Mermaid 架构图（GitHub 可渲染）
+### 2.1 Mermaid 架构图（GitHub 可渲染：网络拓扑示意 + 节点结构示意）
+
+#### 2.1.0 网络拓扑（Overlay = 多个 L2 节点互联形成的 DHT/P2P Mesh）
+
 ```mermaid
 flowchart LR
-  %% Three-layer model describes the *structure of a node*.
-  %% A Decent Network overlay is formed by MANY nodes running the same Layer-2 SDK/Protocol.
+  %% V6: Topology-style overlay. Many nodes, many links (DHT/P2P mesh).
+  %% Keep labels short to avoid truncation in GitHub.
 
-  %% --- App nodes (multiple) ---
-  subgraph APPN["App Nodes (many)"]
-    direction TB
-    A1L3["L3: App (User UI)"]
-    A1L2["L2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
-    A1L1["L1: Carrier<br/>(Phone)"]
-    A1L3 --> A1L2 --> A1L1
-
-    A2L3["L3: App (User UI)"]
-    A2L2["L2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
-    A2L1["L1: Carrier<br/>(Phone)"]
-    A2L3 --> A2L2 --> A2L1
-  end
-
-  %% --- Web nodes (multiple) ---
-  subgraph WEBN["Web Nodes (many)"]
-    direction TB
-    W1L3["L3: Web (Service/UI)"]
-    W1L2["L2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
-    W1L1["L1: Carrier<br/>(Server / VM)"]
-    W1L3 --> W1L2 --> W1L1
-
-    W2L3["L3: Web (Service/UI)"]
-    W2L2["L2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
-    W2L1["L1: Carrier<br/>(Server / VM)"]
-    W2L3 --> W2L2 --> W2L1
-  end
-
-  %% --- Agent nodes (multiple) ---
-  subgraph AGN["Agent Nodes (many)"]
-    direction TB
-    G1L3["L3: Agent"]
-    G1L2["L2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
-    G1L1["L1: Carrier<br/>(PC / Server / VM)"]
-    G1L3 --> G1L2 --> G1L1
-
-    G2L3["L3: Agent"]
-    G2L2["L2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
-    G2L1["L1: Carrier<br/>(PC / Server / VM)"]
-    G2L3 --> G2L2 --> G2L1
-  end
-
-  %% Overlay as a wide, short label to avoid truncation
-  subgraph OVER["Decent Network Overlay (formed by all L2 instances)"]
+  subgraph L2NET["Decent Network Overlay (L2 mesh)"]
     direction LR
-    O["Identity-reachable Communication Overlay<br/>(Discovery • Routing/Relay • Sessions)"]
+    N1(("L2-1"))
+    N2(("L2-2"))
+    N3(("L2-3"))
+    N4(("L2-4"))
+    N5(("L2-5"))
+    N6(("L2-6"))
+    N7(("L2-7"))
+    N8(("L2-8"))
+
+    %% mesh-ish links (conceptual)
+    N1 --- N2
+    N2 --- N3
+    N3 --- N4
+    N4 --- N5
+    N5 --- N6
+    N6 --- N7
+    N7 --- N8
+    N8 --- N1
+    N2 --- N5
+    N3 --- N6
+    N1 --- N4
+    N5 --- N8
   end
 
-  %% Connect all L2s into the overlay (conceptual)
-  A1L2 --- O
-  A2L2 --- O
-  W1L2 --- O
-  W2L2 --- O
-  G1L2 --- O
-  G2L2 --- O
+  %% Node types attach to some L2 instances (conceptual)
+  A1["App Node"] --- N1
+  A2["App Node"] --- N6
+  W1["Web Node"] --- N2
+  W2["Web Node"] --- N5
+  G1["Agent Node"] --- N4
+  G2["Agent Node"] --- N8
 
-  %% Optional: show that nodes can communicate via the overlay
-  A1L2 -. "msg/call" .- G1L2
-  G2L2 -. "event" .- W1L2
-``````
-Node = (Product Surface) + (Decent Network SDK/Protocol) + (Carrier)
+  %% Example traffic (conceptual)
+  A1 -. "msg/call" .- G1
+  G2 -. "event" .- W1
+```
 
-- App Node   : App   + Decent Network + Phone
-- Web Node   : Web   + Decent Network + Server/VM
-- Agent Node : Agent + Decent Network + PC/Server/VM
+#### 2.1.1 通过 Overlay 进行消息/通话的路径示意（概念）
 
-Many nodes running the same Layer-2 form the Decent Network overlay.
+```mermaid
+sequenceDiagram
+  participant App as App Node
+  participant L2A as L2 (local)
+  participant Mesh as Overlay (DHT/P2P)
+  participant L2B as L2 (remote)
+  participant Agent as Agent Node
 
+  App->>L2A: msg/call (identity-signed)
+  L2A->>Mesh: discover + route (DHT)
+  Mesh->>L2B: route/relay (as needed)
+  L2B->>Agent: deliver to session
+  Agent-->>App: response/event
+```
+
+#### 2.1.2 “三层 = 一个节点的结构”（App/Web/Agent 的载体映射）
 
 ```mermaid
 flowchart TB
-  %% Note: GitHub Mermaid is strict—avoid \n in node text; use <br/> and quotes.
-  subgraph L3["Layer 3: Product Surface（用户可见）"]
-    APP["App"]
-    WEB["Web"]
-    AGENT["AI Agents<br/>(Assistant • Sales • Support • Dev)"]
+  subgraph NODE["Node = L3 (Surface) + L2 (Decent Network) + L1 (Carrier)"]
+    direction TB
+    L3["L3: App / Web / Agent"]
+    L2["L2: SDK/Protocol<br/>(DHT • P2P • Identity)"]
+    L1["L1: Carrier<br/>(Phone • PC • Server • VM)"]
+    L3 --> L2 --> L1
   end
 
-  subgraph L2["Layer 2: Decent Network（通讯优先）"]
-    COMM["Identity-addressable Communication"]
-    ID["Identity & Permissions"]
-    STREAM["Events / Streams<br/>(IM • API • CLI • Webhook)"]
-  end
+  MAP1["App Node = App + L2 + Phone"]
+  MAP2["Web Node = Web + L2 + Server/VM"]
+  MAP3["Agent Node = Agent + L2 + PC/Server/VM"]
 
-  subgraph L1["Layer 1: Resource Nodes（可访问资源）"]
-    DEV["Personal Devices"]
-    PRIV["Private Servers / VMs"]
-    CLOUD["Cloud Nodes"]
-    STORE["Storage Nodes"]
-    COMP["Compute Nodes"]
-  end
-
-  APP --> COMM
-  WEB --> COMM
-  AGENT --> COMM
-
-  COMM --> ID
-  COMM --> STREAM
-
-  ID --> STORE
-  ID --> COMP
-
-  DEV --> STORE
-  PRIV --> STORE
-  CLOUD --> STORE
-  DEV --> COMP
-  PRIV --> COMP
-  CLOUD --> COMP
+  NODE --> MAP1
+  NODE --> MAP2
+  NODE --> MAP3
 ```
-### 2.2 ASCII （备选图）
-```
-[App]   [Web]   [Agents]
-   \      |       /
-    \     |      /
- [ Decent Network: identity-addressable communication ]
-          |
- [ Accessible Storage & Compute Nodes ]
- (personal devices / private servers / cloud / VMs)
-```
-
 ---
 
 ## 3. Glossary（术语定义）
