@@ -3,7 +3,7 @@
 
 Wei Li  
 [@0xWLi](https://x.com/0xwli)  
-Jan 20 - Feb 5
+Jan 20 - Feb 5, 2026
 
 ---
 
