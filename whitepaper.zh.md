@@ -38,6 +38,45 @@ Agent 成为组织的执行单元后，需要：
 
 ### 2.1 Mermaid 架构图（GitHub 可渲染）
 ```mermaid
+flowchart LR
+  %% Three-layer model describes the *structure of a node*.
+  %% A network is formed by many nodes running the same Decent Network protocol/SDK.
+
+  subgraph N1["Node Type A: App Node"]
+    direction TB
+    N1L3["Layer 3: App"]
+    N1L2["Layer 2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
+    N1L1["Layer 1: Carrier<br/>(Phone)"]
+    N1L3 --> N1L2 --> N1L1
+  end
+
+  subgraph N2["Node Type B: Web Node"]
+    direction TB
+    N2L3["Layer 3: Web"]
+    N2L2["Layer 2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
+    N2L1["Layer 1: Carrier<br/>(Server / VM)"]
+    N2L3 --> N2L2 --> N2L1
+  end
+
+  subgraph N3["Node Type C: Agent Node"]
+    direction TB
+    N3L3["Layer 3: Agent"]
+    N3L2["Layer 2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
+    N3L1["Layer 1: Carrier<br/>(PC / Server / VM)"]
+    N3L3 --> N3L2 --> N3L1
+  end
+
+  subgraph OVERLAY["Decent Network Overlay (formed by Layer-2s)"]
+    direction LR
+    O["Reachable Communication Graph<br/>(Friend Discovery • Routing/Relay • Sessions)"]
+  end
+
+  N1L2 --- O
+  N2L2 --- O
+  N3L2 --- O
+```
+
+```mermaid
 flowchart TB
   %% Note: GitHub Mermaid is strict—avoid \n in node text; use <br/> and quotes.
   subgraph L3["Layer 3: Product Surface（用户可见）"]
