@@ -1,4 +1,4 @@
-# Build App/Web/Agents — Use Decent Network to Solve the “System Layer”
+# Deliver Apps/Web/Agents — Decent Network Solves Reachability, Identity, and Resources
 
 Wei Li — [@0xWLi](https://x.com/0xWLi)
 
