@@ -40,41 +40,76 @@ Agent 成为组织的执行单元后，需要：
 ```mermaid
 flowchart LR
   %% Three-layer model describes the *structure of a node*.
-  %% A network is formed by many nodes running the same Decent Network protocol/SDK.
+  %% A Decent Network overlay is formed by MANY nodes running the same Layer-2 SDK/Protocol.
 
-  subgraph N1["Node Type A: App Node"]
+  %% --- App nodes (multiple) ---
+  subgraph APPN["App Nodes (many)"]
     direction TB
-    N1L3["Layer 3: App"]
-    N1L2["Layer 2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
-    N1L1["Layer 1: Carrier<br/>(Phone)"]
-    N1L3 --> N1L2 --> N1L1
+    A1L3["L3: App (User UI)"]
+    A1L2["L2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
+    A1L1["L1: Carrier<br/>(Phone)"]
+    A1L3 --> A1L2 --> A1L1
+
+    A2L3["L3: App (User UI)"]
+    A2L2["L2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
+    A2L1["L1: Carrier<br/>(Phone)"]
+    A2L3 --> A2L2 --> A2L1
   end
 
-  subgraph N2["Node Type B: Web Node"]
+  %% --- Web nodes (multiple) ---
+  subgraph WEBN["Web Nodes (many)"]
     direction TB
-    N2L3["Layer 3: Web"]
-    N2L2["Layer 2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
-    N2L1["Layer 1: Carrier<br/>(Server / VM)"]
-    N2L3 --> N2L2 --> N2L1
+    W1L3["L3: Web (Service/UI)"]
+    W1L2["L2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
+    W1L1["L1: Carrier<br/>(Server / VM)"]
+    W1L3 --> W1L2 --> W1L1
+
+    W2L3["L3: Web (Service/UI)"]
+    W2L2["L2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
+    W2L1["L1: Carrier<br/>(Server / VM)"]
+    W2L3 --> W2L2 --> W2L1
   end
 
-  subgraph N3["Node Type C: Agent Node"]
+  %% --- Agent nodes (multiple) ---
+  subgraph AGN["Agent Nodes (many)"]
     direction TB
-    N3L3["Layer 3: Agent"]
-    N3L2["Layer 2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
-    N3L1["Layer 1: Carrier<br/>(PC / Server / VM)"]
-    N3L3 --> N3L2 --> N3L1
+    G1L3["L3: Agent"]
+    G1L2["L2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
+    G1L1["L1: Carrier<br/>(PC / Server / VM)"]
+    G1L3 --> G1L2 --> G1L1
+
+    G2L3["L3: Agent"]
+    G2L2["L2: Decent Network SDK/Protocol<br/>(DHT • P2P Transport • Identity)"]
+    G2L1["L1: Carrier<br/>(PC / Server / VM)"]
+    G2L3 --> G2L2 --> G2L1
   end
 
-  subgraph OVERLAY["Decent Network Overlay (formed by Layer-2s)"]
+  %% Overlay as a wide, short label to avoid truncation
+  subgraph OVER["Decent Network Overlay (formed by all L2 instances)"]
     direction LR
-    O["Reachable Communication Graph<br/>(Friend Discovery • Routing/Relay • Sessions)"]
+    O["Identity-reachable Communication Overlay<br/>(Discovery • Routing/Relay • Sessions)"]
   end
 
-  N1L2 --- O
-  N2L2 --- O
-  N3L2 --- O
-```
+  %% Connect all L2s into the overlay (conceptual)
+  A1L2 --- O
+  A2L2 --- O
+  W1L2 --- O
+  W2L2 --- O
+  G1L2 --- O
+  G2L2 --- O
+
+  %% Optional: show that nodes can communicate via the overlay
+  A1L2 -. "msg/call" .- G1L2
+  G2L2 -. "event" .- W1L2
+``````
+Node = (Product Surface) + (Decent Network SDK/Protocol) + (Carrier)
+
+- App Node   : App   + Decent Network + Phone
+- Web Node   : Web   + Decent Network + Server/VM
+- Agent Node : Agent + Decent Network + PC/Server/VM
+
+Many nodes running the same Layer-2 form the Decent Network overlay.
+
 
 ```mermaid
 flowchart TB
