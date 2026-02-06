@@ -1,4 +1,4 @@
-# Whitepaper（扩展版）：Decent Network × App/Web × Agent 的三层架构
+# Whitepaper：Decent Network × App/Web × Agent 的三层架构
 
 > 目标读者：Founder / 技术负责人 / 投资人  
 > 本文只描述“需求、抽象与架构”，不展开实现细节。
@@ -94,7 +94,7 @@ flowchart TB
 
 - **Node（节点）**：加入网络的参与者，可是个人设备、私有服务器或云节点  
 - **Identity（身份）**：节点的唯一标识，用于发现、连接、授权与审计  
-- **Friend Graph（好友网络）**：基于身份建立的连接关系与可达路径  
+- **Friend Netword（好友网络）**：基于身份建立的连接关系与可达路径  
 - **Agent（智能代理）**：具备身份的数字执行体（助理/销售/客服/开发），主要用自然语言工作  
 - **Resource Node（资源节点）**：可被访问的存储/计算提供者（个人设备/私有服务器/云）  
 - **Stream / Events（事件流）**：系统与 Agent 的输入/输出通道（IM/API/CLI/Webhook）
