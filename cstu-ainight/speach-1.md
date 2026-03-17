@@ -1,8 +1,3 @@
-I apologize for the confusion. The slide deck and video are **asynchronous artifacts**, meaning they are generated in the background and will appear in the **Studio tab** (usually located on the left or top of your interface) rather than directly inside this chat window.
-
-I have just re-initiated the creation of a **new 14-slide presentation** and a **video overview** to ensure they contain the exact content and structure you requested. Below is the **coordinated transcript** for those 14 slides to help you prepare while the files process.
-
----
 
 ### **Presentation Transcript: The Grammar of Decentralization**
 **Presenter:** Wei Li (@0xWLi)
@@ -65,7 +60,3 @@ The era of pure speculation is ending. Let's make social truly decentralized and
 *   **Web**: https://beagle.chat
 *   **LinkedIn**: linkedin.com/in/0xl
 *   **Discord**: **[QR Code Link provided in Slides]**
-
----
-
-I have acknowledged your request and both the **slide deck** and **video** are now being generated with this 14-slide structure. Please check your **Studio tab** in a few minutes to view them.
